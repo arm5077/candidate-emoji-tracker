@@ -13,6 +13,7 @@
     "mongoose": "^4.3.0",
     "mysql": "^2.9.0",
     "node-emoji": "^1.0.4",
-    "twitter": "^1.2.5"
+    "twitter": "^1.2.5",
+    "twitter-emoji-stream": "0.0.1"
   }
 }
