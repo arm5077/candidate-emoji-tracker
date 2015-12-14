@@ -6,6 +6,10 @@
 
 	<!-- D3.js -->
 	<script src="bower_components/angularjs/angular.min.js"></script>
+
+
+	<!-- Basic styles -->
+	<link rel="stylesheet" href="base-styles.css" />
 	
 	<!-- Site-specific styles -->
 	<link rel="stylesheet" href="styles.css" />
@@ -16,6 +20,9 @@
 	<div class="" ng-repeat="candidate in data">
 		<div class="name">{{candidates[candidate.name]}}</div>
 		<div class="big-emoji">{{candidate.emojis[0].emoji}}</div>
+		<div class="small-emoji" ng-repeat="emoji in candidate.emojis">
+			{{emoji.emoji}}
+		</div>
 	</div>
 
 </body>
