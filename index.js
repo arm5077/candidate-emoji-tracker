@@ -1,8 +1,8 @@
 var express = require("express");
 var app = express();
 var server = require('http').Server(app);
-var api = require("api");
-var politicalEmojis = require("political-emojis");
+var api = require("./node_modules/api");
+var politicalEmojis = require("./node_modules/political-emojis");
 
 
 // Start web server 
