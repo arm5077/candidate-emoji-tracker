@@ -4,9 +4,12 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- D3.js -->
+	<!-- angular.js -->
 	<script src="bower_components/angularjs/angular.min.js"></script>
-
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	
+	<!-- Socket.io -->
+	<script src="/socket.io/socket.io.js"></script>
 
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="base-styles.css" />
@@ -17,6 +20,14 @@
 </head>
 <body ng-controller="controller">
 
+	<div class="feed">
+		<a ng-href="{{emoji.link}}" class="feed-item" ng-repeat="emoji in feed" target="blank">
+			<div class="emoji">{{emoji.emoji}}</div>
+			<div class="name">{{emoji.candidate}}</div>
+		</a>
+	</div>
+
+	<!--
 	<div class="" ng-repeat="candidate in data">
 		<div class="name">{{candidates[candidate.name]}}</div>
 		<div class="big-emoji">{{candidate.emojis[0].emoji}}</div>
@@ -24,10 +35,12 @@
 			{{emoji.emoji}}
 		</div>
 	</div>
-
+	-->
 </body>
 
 <!-- My scripts -->
 <script src="app.js"></script>
+
+
 
 </html>

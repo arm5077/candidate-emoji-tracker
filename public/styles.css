@@ -1,3 +1,35 @@
+.feed {
+	height: 80px;
+	overflow: hidden;
+}
+
+.feed a.feed-item {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	transition: 1s all;
+	opacity: 1;
+	width: 100px;
+	text-align: center;
+	
+}
+
+	a.feed-item.ng-enter {
+		width: 0px;
+		opacity: 0;
+	}
+	
+	.feed-item .name {
+		font-family: Rajdhani;
+		font-size: 11pt;
+		text-transform: uppercase;
+		color: #333;
+	}
+	
+	.feed-item .emoji {
+		font-size: 35pt;
+	}
+	
 .name {
 	font-family: "Lyon Display";
 	font-size: 25pt;
