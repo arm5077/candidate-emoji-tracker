@@ -1,1 +1,4 @@
-node_modules
+node_modules/*
+!node_modules/api
+!node_modules/political-emojis
+!node_modules/twitter-emoji-stream
