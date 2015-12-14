@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- D3.js -->
+	<script src="bower_components/angularjs/angular.min.js"></script>
+	
+	<!-- Site-specific styles -->
+	<link rel="stylesheet" href="styles.css" />
+	
+</head>
+<body ng-controller="controller">
+
+	<div class="" ng-repeat="candidate in data">
+		<div class="name">{{candidates[candidate.name]}}</div>
+		<div class="big-emoji">{{candidate.emojis[0].emoji}}</div>
+	</div>
+
+</body>
+
+<!-- My scripts -->
+<script src="app.js"></script>
+
+</html>
