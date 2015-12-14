@@ -1,4 +1,4 @@
-var twitterEmojiStream = require("twitter-emoji-stream");
+var twitterEmojiStream = require("./my_modules/twitter-emoji-stream/index");
 var mysql = require("mysql");
 var fs = require("fs");
 var express = require("express");

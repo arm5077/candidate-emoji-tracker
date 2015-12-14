@@ -1,0 +1,20 @@
+{
+  "name": "twitter-emoji-stream",
+  "version": "0.2.0",
+  "description": "Provides a stream of emojis used in tweets, filtered by keyword.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Andrew McGill"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "twitter": "^1.2.5"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "twitter-emoji-stream@0.0.1",
+  "_shasum": "2872eb03548c3d0e020fdf206d18e910462ec539",
+  "_from": "twitter-emoji-stream@"
+}
