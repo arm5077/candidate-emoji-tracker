@@ -1,9 +1,8 @@
 var express = require("express");
 var app = express();
 var server = require('http').Server(app);
-var api = require("./node_modules/api/index");
-var politicalEmojis = require("./node_modules/political-emojis/index");
-
+var api = require("./my_modules/api/index");
+var politicalEmojis = require("./my_modules/political-emojis/index");
 
 // Start web server 
 var port = process.env.PORT || 3000;
