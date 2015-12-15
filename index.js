@@ -5,7 +5,6 @@ var mysql = require("mysql");
 var api = require("api");
 var politicalEmojis = require("political-emojis");
 
-
 // Start web server 
 var port = process.env.PORT || 3000;
 
