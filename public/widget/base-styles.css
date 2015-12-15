@@ -1,0 +1,64 @@
+@import url(http://cdn.theatlantic.com/assets/static/common/fonts/proxima-nova.css);
+@import url(http://cdn.theatlantic.com/assets/static/common/fonts/lyon.css);
+@import url(http://cdn.theatlantic.com/assets/static/common/fonts/rajdhani.css);
+
+body {
+	background-color: #f1f1f1;
+	font-family: "Lyon Text";
+}
+
+.title h1 {
+	
+	font-size:18pt;
+	font-weight: 400;
+	margin: 0;
+	font-weight: 600;
+	font-family: "Lyon Display", serif;
+}
+
+
+.title h2 {
+	margin: 0;
+	font-size: 13pt;
+	font-weight: 400;
+	font-family: "Lyon Text", serif;
+}
+
+.title.center {
+	text-align: center;
+}
+
+.footer .footer-tag {
+	font-family: Rajdhani, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.footer {
+	padding-top: 7px;
+	border-bottom: 1px #ccc solid;
+	padding-bottom: 2px;
+}
+
+.logo {
+	background-image: url("https://s3.amazonaws.com/the-atlantic/assets/logo-gray.svg");
+  	background-size: contain;
+	float:left;
+	margin-top:5px;
+}
+
+.source, .notes {
+	font-size: 9pt;
+	font-weight: 300;
+	text-align: right;
+	color: #999;
+	margin-top: 5px;
+	padding-top: 7px;
+}
+
+.notes {
+	max-width: 310px;
+	width: 90%;
+	float: right;
+}

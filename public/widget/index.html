@@ -11,9 +11,6 @@
 	<!-- Socket.io -->
 	<script src="/socket.io/socket.io.js"></script>
 
-	<!-- Regenerate (unicode regex support) -->
-	<script src="bower_components/regenerate/regenerate.js"></script>
-
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="base-styles.css" />
 	
@@ -23,8 +20,6 @@
 </head>
 <body ng-controller="controller">
 
-	
-	
 	<div class="feed">
 		<div class="title">
 			<h1>Election emojis</h1>
@@ -35,27 +30,18 @@
 			<div class="name">{{emoji.candidate}}</div>
 		</a>
 	</div>
-
-	<div class="profiles">
-		<div class="profile" ng-repeat="candidate in data">
-			<div class="header">
-				<div class="name">{{candidates[candidate.name]}}</div>
-			</div>
-
-			<a ng-href="{{ candidate.emojis[0].link }}" target="none"><div class="big-emoji">{{candidate.emojis[0].emoji}}</div></a>
-			<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
-			
-			<div class="small-emoji" ng-repeat="emoji in candidate.emojis | limitTo: 6" ng-if="$index > 0">
-				{{emoji.emoji}}
-			</div>
-		</div>
-	</div>
-	
 </body>
 
 <!-- My scripts -->
 <script src="app.js"></script>
 
+<!-- Pym -->
+<script src="https://s3-us-west-2.amazonaws.com/nationaljournal/libraries/pym-for-ollie.js"></script>
+
+<script type="text/javascript">
+	var pymChild = new pym.Child();
+	setInterval(function(){ pymChild.sendHeight(); console.log("Sending pym ping!") }, 250);
+</script>
 
 
 </html>

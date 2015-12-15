@@ -10,13 +10,29 @@ angular.module("app", ['ngAnimate'])
 	$http.get("candidates.json").success(function(data){
 		
 		$scope.candidates = {};
-		data.forEach(function(d){
+		data.forEach(function(d,i){
 			$scope.candidates[d.last_name.toLowerCase()] = d.full_name;
 		});
-		console.log($scope.candidates);
 	});
 	
 	$http.get("/api/list").success(function(data){
+		
+		// Get rid of í ½í¸‚... it's so popular that it skews the results
+		// Also get rid of skin tones
+		data.forEach(function(candidate){
+			candidate.emojis = candidate.emojis.filter(function(d){ 
+				return !RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji);
+			 });
+			
+			// Figure out percentages
+			candidate.emojis.forEach(function(emoji){
+				emoji.percentage = Math.round(emoji.count / candidate.total * 1000) / 10; 
+			});
+		});
+		
+		
+		
+		// Bind to DOM
 		$scope.data = data;
 	});
 	
