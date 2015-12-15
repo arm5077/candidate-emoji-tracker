@@ -13,7 +13,7 @@ server.listen(port, function(){
 });
 
 // Create pool of connections
-global.pool = mysql.createPool((process.env.CLEARDB_DATABASE_URL || "mysql://root@localhost/candidate-emoji-tracker") + "?debug=false&charset=utf8mb4&connectionLimit=10");
+global.pool = mysql.createPool((process.env.CLEARDB_DATABASE_URL || "mysql://root@localhost/candidate-emoji-tracker") + "?debug=false&charset=utf8mb4&connectionLimit=9");
 pool.on("error", function(err){  
 	console.log(err);
 	pool.end;

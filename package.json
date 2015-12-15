@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apicache": "0.0.12",
     "emoji-regex": "^6.0.0",
     "express": "^4.13.3",
     "mongoose": "^4.3.0",
