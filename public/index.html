@@ -37,13 +37,13 @@
 	</div>
 
 	<div class="profiles">
-		<div class="profile" ng-repeat="candidate in data" ng-if="candidate.emojis.length >=6">
+		<div class="profile" ng-repeat="candidate in data" ng-if="candidate.emojis.length >=6" ng-class="{democrat: party[candidate.name] == 'democrat'}">
 			<div class="header">
 				<div class="name">{{candidates[candidate.name]}} <span class="small">({{candidate.total}})</span></div>
 			</div>
 
 			<a class="big-emoji-holder" ng-href="{{ candidate.emojis[0].link }}" target="none">
-				<div class="title">Top</div>
+				<div class="title">Most popular</div>
 				<div class="big-emoji">{{candidate.emojis[0].emoji}}</div>
 				<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
 			</a>
@@ -55,6 +55,17 @@
 					<div class="percentage">{{emoji.percentage}}%</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+
+
+		<div style="clear: both"></div>
+		<div class="logo" style="width: 56px; height: 19px"></div>	
+
+		<div class="source">
+			<span class="footer-tag">Source</span> | Twitter streaming API
 		</div>
 	</div>
 	

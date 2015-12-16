@@ -107,6 +107,10 @@ a {
 	color: rgba(255,255,255,.95);
 }
 
+	.profile.democrat .header{
+		background-color: #003A63;
+	}
+
 .big-emoji-holder {
 	float: left;
 	padding: 10px;
@@ -148,8 +152,25 @@ a {
 	width: 30px;
 }
 
+	.democrat .small-emoji .emoji {
+		border-right: 3px solid rgba(0,58,99, .2);
+	}
+
 .small-emoji .percentage {
 	font-family: "Rajdhani", serif;
 	width: 30px;
 	text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+	.profile {
+		width: 90%;
+	}
+	
+	.small-emoji-holder {
+		width: 32%;
+	}
+	.big-emoji-holder {
+		width: 50%;
+	}
 }

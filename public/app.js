@@ -2,7 +2,12 @@ angular.module("app", ['ngAnimate'])
 .controller("controller", ["$scope", "$http", "$sce", function($scope, $http, $sce){
 	
 	// Hard-coding party in here
-	$scope.party = 
+	$scope.party = {
+		"clinton": "democrat",
+		"sanders": "democrat",
+		"o'malley": "democrat",
+		"webb": "democrat"
+	}
 	$scope.feed = [];
 	$http.get("/api/latest").success(function(data){
 		data = data.filter(function(d){ 
