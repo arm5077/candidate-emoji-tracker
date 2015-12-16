@@ -19,9 +19,9 @@ pool.on("error", function(err){
 	pool.end;
 });
 
+
 app.use('/api', api)
 	.use('/stream', politicalEmojis.app);
-
 
 // Set up static page (main page)
 app.use("/", express.static(__dirname + "/public/"));

@@ -11,9 +11,10 @@ angular.module("app", ['ngAnimate'])
 			case "large": size = "72x72"; break;
 		}
 		
-		// rolling eyes emoji?
+		// rolling eyes emoji? special fix until twemoji catches up
 		if(new RegExp(/\uD83D\uDE44/).test(emoji))
 			return $scope.renderHTML('<img class="emoji" draggable="false" alt="rolling eyes" src="'+'/extra_emoji/' + size + '/1f644.png'+'">');
+		// Other random emoji everyone likes
 		else if(RegExp(/\uD83E\uDD14/).test(emoji))
 			return $scope.renderHTML('<img class="emoji" draggable="false" alt="rolling eyes" src="'+'/extra_emoji/' + size + '/1f914.png'+'">');
 		else {
@@ -59,6 +60,7 @@ angular.module("app", ['ngAnimate'])
 				if(RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji))
 					candidate.total -= d.count;
 			})
+			
 			candidate.emojis = candidate.emojis.filter(function(d){ 
 				return !RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji);
 			 });

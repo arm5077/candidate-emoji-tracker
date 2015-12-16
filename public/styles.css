@@ -74,7 +74,7 @@ a {
 }
 
 
-.feed a.feed-item {
+.feed all {
 	text-decoration: none;
 	color: inherit;
 	display: inline-block;
@@ -120,7 +120,7 @@ a {
 }
 
 .profile {
-	width: 300px;
+	width: 268px;
 	margin: 20px;
 	display: inline-block;
 	vertical-align: top;
@@ -133,19 +133,20 @@ a {
 
 .profile .header {
 	background-color: #EE2A24;
-	padding: 5px 0px;
+	padding: 8px 0px;
 }
 
 .profile .header .name {
-	font-family: "Rajdhani", sans-serif;
+	font-family: "Proxima Nova", sans-serif;
 	text-transform: uppercase;
-	font-size: 16pt;
+	font-size: 13pt;
+	font-weight: 600;
 	letter-spacing: 1;
 	color: rgba(255,255,255,.95);
 }
 
 	.profile.democrat .header{
-		background-color: #003A63;
+		background-color: #2585E4;
 	}
 
 .big-emoji-holder {
@@ -184,7 +185,7 @@ a {
 }
 
 .small-emoji a.emoji {
-	border-right: 3px solid rgba(238,42,36,.2);
+	border-right: 3px solid #ccc;
 	padding-right: 10px;
 	margin-right: 10px;
 	width: 30px;
@@ -194,9 +195,6 @@ a {
 	width: 25px;
 }
 
-	.democrat .small-emoji a.emoji {
-		border-right: 3px solid rgba(0,58,99, .2);
-	}
 
 .small-emoji .percentage {
 	font-family: "Rajdhani", serif;
