@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./public/bower install"
+    "postinstall": "cd public && bower install"
   },
   "author": "",
   "license": "ISC",
