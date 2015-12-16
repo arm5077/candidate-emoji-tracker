@@ -75,6 +75,7 @@ a {
 
 .big-emoji {
 	font-size: 100pt;
+	margin-top: -10px;
 }
 
 .profiles {
@@ -104,4 +105,51 @@ a {
 	font-size: 16pt;
 	letter-spacing: 1;
 	color: rgba(255,255,255,.95);
+}
+
+.big-emoji-holder {
+	float: left;
+	padding: 10px;
+}
+
+.big-emoji-holder .title, .small-emoji-holder .title {
+	text-align: center;
+	font-family: Rajdhani, sans-serif;
+	text-transform: uppercase;
+	
+	
+}
+
+.big-emoji-holder .number {
+	font-family: Rajdhani, sans-serif;
+	position: relative;
+	margin-top: -25px;
+	font-size: 20pt;
+}
+
+.small-emoji-holder {
+	float:left;
+	width: 120px;
+	padding: 10px;
+}
+
+.small-emoji {
+	margin-top: 10px;
+}
+
+.small-emoji .emoji, .small-emoji .percentage {
+	display: inline-block;
+}
+
+.small-emoji .emoji {
+	border-right: 3px solid rgba(238,42,36,.2);
+	padding-right: 10px;
+	margin-right: 10px;
+	width: 30px;
+}
+
+.small-emoji .percentage {
+	font-family: "Rajdhani", serif;
+	width: 30px;
+	text-align: left;
 }

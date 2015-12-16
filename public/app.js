@@ -20,6 +20,10 @@ angular.module("app", ['ngAnimate'])
 		// Get rid of í ½í¸‚... it's so popular that it skews the results
 		// Also get rid of skin tones
 		data.forEach(function(candidate){
+			candidate.emojis.forEach(function(d){
+				if(RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji))
+					candidate.total -= d.count;
+			})
 			candidate.emojis = candidate.emojis.filter(function(d){ 
 				return !RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji);
 			 });

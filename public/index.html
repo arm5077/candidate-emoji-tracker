@@ -37,16 +37,23 @@
 	</div>
 
 	<div class="profiles">
-		<div class="profile" ng-repeat="candidate in data">
+		<div class="profile" ng-repeat="candidate in data" ng-if="candidate.emojis.length >=6">
 			<div class="header">
-				<div class="name">{{candidates[candidate.name]}}</div>
+				<div class="name">{{candidates[candidate.name]}} <span class="small">({{candidate.total}})</span></div>
 			</div>
 
-			<a ng-href="{{ candidate.emojis[0].link }}" target="none"><div class="big-emoji">{{candidate.emojis[0].emoji}}</div></a>
-			<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
-			
-			<div class="small-emoji" ng-repeat="emoji in candidate.emojis | limitTo: 6" ng-if="$index > 0">
-				{{emoji.emoji}}
+			<a class="big-emoji-holder" ng-href="{{ candidate.emojis[0].link }}" target="none">
+				<div class="title">Top</div>
+				<div class="big-emoji">{{candidate.emojis[0].emoji}}</div>
+				<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
+			</a>
+
+			<div class="small-emoji-holder">
+				<div class="title">The rest</div>
+				<div class="small-emoji" ng-repeat="emoji in candidate.emojis | limitTo: 6" ng-if="$index > 0">
+					<a class="emoji" ng-href="{{emoji.link}}">{{emoji.emoji}}</a>
+					<div class="percentage">{{emoji.percentage}}%</div>
+				</div>
 			</div>
 		</div>
 	</div>
