@@ -1,6 +1,7 @@
 angular.module("app", ['ngAnimate'])
 .controller("controller", ["$scope", "$http", "$sce", function($scope, $http, $sce){
 	
+	$scope.renderHTML = function(text){ return $sce.trustAsHtml(text); };	
 	$scope.emojione = emojione;
 	
 	// Hard-coding party in here
@@ -57,6 +58,7 @@ angular.module("app", ['ngAnimate'])
 	socket.on('tweet', function (data) {
 		$scope.$apply(function(){
 			$scope.feed.unshift(data);
+			$scope.feed.splice(10 , 20);
 		})
 		console.log(data);
 	});

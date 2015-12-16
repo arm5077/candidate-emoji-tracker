@@ -91,7 +91,7 @@ a {
 	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0px 0px 1px black;
-	padding: 0px 0px 10px 0px
+	padding: 0px 0px 10px 0px;
 }
 
 .profile .header {
@@ -112,8 +112,9 @@ a {
 	}
 
 .big-emoji-holder {
-	float: left;
+	display:inline-block;
 	padding: 10px;
+	vertical-align: top;
 }
 
 .big-emoji-holder .title, .small-emoji-holder .title {
@@ -132,7 +133,7 @@ a {
 }
 
 .small-emoji-holder {
-	float:left;
+	display:inline-block;
 	width: 120px;
 	padding: 10px;
 }
@@ -150,6 +151,10 @@ a {
 	padding-right: 10px;
 	margin-right: 10px;
 	width: 30px;
+}
+
+.small-emoji .emoji img {
+	width: 25px;
 }
 
 	.democrat .small-emoji .emoji {

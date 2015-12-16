@@ -13,6 +13,9 @@
 
 	<!-- Regenerate (unicode regex support) -->
 	<script src="bower_components/regenerate/regenerate.js"></script>
+	
+	<!-- Emojione support -->
+	<script src="bower_components/emojione/lib/js/emojione.js"></script>
 
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="base-styles.css" />
@@ -31,7 +34,7 @@
 			<h2>A live feed of the emojis being used to describe candidates on Twitter.</h2>
 		</div>
 		<a ng-href="{{emoji.link}}" class="feed-item" ng-repeat="emoji in feed" target="blank">
-			<div class="emoji">{{emoji.emoji}}</div>
+			<div class="emoji" ng-bind-html="renderHTML(emojione.unicodeToImage(emoji.emoji))"></div>
 			<div class="name">{{emoji.candidate}}</div>
 		</a>
 	</div>
@@ -44,14 +47,14 @@
 
 			<a class="big-emoji-holder" ng-href="{{ candidate.emojis[0].link }}" target="none">
 				<div class="title">Most popular</div>
-				<div class="big-emoji">{{candidate.emojis[0].emoji}}</div>
+				<div class="big-emoji" ng-bind-html="renderHTML(emojione.unicodeToImage(candidate.emojis[0].emoji))"></div>
 				<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
 			</a>
 
 			<div class="small-emoji-holder">
 				<div class="title">The rest</div>
 				<div class="small-emoji" ng-repeat="emoji in candidate.emojis | limitTo: 6" ng-if="$index > 0">
-					<a class="emoji" ng-href="{{emoji.link}}">{{emoji.emoji}}</a>
+					<a class="emoji" ng-href="{{emoji.link}}" ng-bind-html="renderHTML(emojione.unicodeToImage(emoji.emoji))" target="none">{{emoji.emoji}}</a>
 					<div class="percentage">{{emoji.percentage}}%</div>
 				</div>
 			</div>
