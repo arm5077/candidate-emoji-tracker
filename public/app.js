@@ -3,6 +3,10 @@ angular.module("app", ['ngAnimate'])
 	
 	$scope.renderHTML = function(text){ return $sce.trustAsHtml(text); };	
 	$scope.emojione = emojione;
+	emoji.img_path = "images/"
+	$scope.js_emoji = emoji;
+	
+	console.log(emoji.replace_unified("í ½í´§"));
 	
 	// Hard-coding party in here
 	$scope.party = {

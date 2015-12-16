@@ -17,6 +17,10 @@
 	<!-- Emojione support -->
 	<script src="bower_components/emojione/lib/js/emojione.js"></script>
 
+	<!-- js-emoji support -->
+	<script src="bower_components/js-emoji/emoji.js"></script>
+	<link href="bower_components/js-emoji/emoji.css" rel="stylesheet" type="text/css" />
+
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="base-styles.css" />
 	
@@ -47,7 +51,7 @@
 
 			<a class="big-emoji-holder" ng-href="{{ candidate.emojis[0].link }}" target="none">
 				<div class="title">Most popular</div>
-				<div class="big-emoji" ng-bind-html="renderHTML(emojione.unicodeToImage(candidate.emojis[0].emoji))"></div>
+				<div class="big-emoji" ng-bind-html="renderHTML(js_emoji.replace_unified(candidate.emojis[0].emoji))"></div>
 				<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
 			</a>
 
