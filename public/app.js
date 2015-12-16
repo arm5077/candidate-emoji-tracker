@@ -10,9 +10,18 @@ angular.module("app", ['ngAnimate'])
 			case "medium": size = "36x36"; break;
 			case "large": size = "72x72"; break;
 		}
-		var code = $scope.twemoji.parse(emoji, function(icon, options, variant){
-			return '/bower_components/twemoji/' + size + '/' + icon + '.png';
-		})
+		
+		// rolling eyes emoji?
+		if(new RegExp(/\uD83D\uDE44/).test(emoji))
+			return $scope.renderHTML('<img class="emoji" draggable="false" alt="rolling eyes" src="'+'/extra_emoji/' + size + '/1f644.png'+'">');
+		else if(RegExp(/\uD83E\uDD14/).test(emoji))
+			return $scope.renderHTML('<img class="emoji" draggable="false" alt="rolling eyes" src="'+'/extra_emoji/' + size + '/1f914.png'+'">');
+		else {
+			var code = $scope.twemoji.parse(emoji, function(icon, options, variant){
+				return '/bower_components/twemoji/' + size + '/' + icon + '.png';
+			})
+		}
+		
 		
 		return $scope.renderHTML(code);
 	}
