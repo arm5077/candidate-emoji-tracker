@@ -1,6 +1,8 @@
 angular.module("app", ['ngAnimate'])
 .controller("controller", ["$scope", "$http", "$sce", function($scope, $http, $sce){
 	
+	$scope.emojione = emojione;
+	
 	// Hard-coding party in here
 	$scope.party = {
 		"clinton": "democrat",

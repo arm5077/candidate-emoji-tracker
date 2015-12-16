@@ -1,6 +1,9 @@
 angular.module("app", ['ngAnimate'])
 .controller("controller", ["$scope", "$http", "$sce", function($scope, $http, $sce){
-	
+
+	$scope.renderHTML = function(text){ return $sce.trustAsHtml(text); };	
+
+	$scope.emojione = emojione;
 	$scope.feed = [];
 	$http.get("/api/latest").success(function(data){
 		$scope.feed = data;
