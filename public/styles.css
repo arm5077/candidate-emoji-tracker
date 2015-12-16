@@ -7,6 +7,10 @@ a {
 	text-decoration: none;
 }
 
+.notes a {
+	text-decoration: underline;
+}
+
 .titlebox h1 {
 	
 	font-size:18pt;

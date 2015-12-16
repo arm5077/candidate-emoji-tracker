@@ -69,10 +69,12 @@
 	
 	<div class="footer">
 
-
+		<div class="notes">
+			This analysis excludes <span ng-bind-html="renderEmoji('\uD83D\uDE02', 'small')"></span>, which is <a href="https://twitter.com/emojitracker/status/667852289705648128">bizarrely popular overall</a> and skewed the results.
+		</div>
 		<div style="clear: both"></div>
 		<div class="logo" style="width: 56px; height: 19px"></div>	
-
+		
 		<div class="source">
 			<span class="footer-tag">Source</span> | Twitter streaming API
 		</div>
@@ -83,6 +85,13 @@
 <!-- My scripts -->
 <script src="app.js"></script>
 
+<!-- Pym -->
+<script src="https://s3-us-west-2.amazonaws.com/nationaljournal/libraries/pym-for-ollie.js"></script>
+
+<script type="text/javascript">
+	var pymChild = new pym.Child();
+	setInterval(function(){ pymChild.sendHeight(); console.log("Sending pym ping!") }, 250);
+</script>
 
 
 </html>
