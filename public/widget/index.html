@@ -27,6 +27,7 @@
 		<div class="title">
 			<h1>Election emojis</h1>
 			<h2>A live feed of the emojis being used to describe candidates on Twitter.</h2>
+			<h3>Emoji characters by <a href="http://emojione.com/">Emoji One</a>.</h3>
 		</div>
 		<a ng-href="{{emoji.link}}" class="feed-item" ng-repeat="emoji in feed" target="blank">
 			<div class="emoji" ng-bind-html="renderHTML(emojione.unicodeToImage(emoji.emoji))"></div>

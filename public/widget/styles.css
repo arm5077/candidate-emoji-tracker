@@ -3,7 +3,7 @@ body {
 }
 
 .feed {
-	height: 104px;
+	height: 122px;
 	overflow: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
     text-align: right;
 }
 
-.feed .title h1, .feed .title h2 {
+.feed .title h1, .feed .title h2, .feed .title h3 {
 	padding: 0;
 	margin: 0;
 	
@@ -33,6 +33,11 @@ body {
     margin-top: 5px;
 }
 
+.feed .title h3 {
+    font-size: 7pt;
+    font-family: "Proxima Nova", serif;
+    margin-top: 2px;
+}
 
 .feed a.feed-item {
 	text-decoration: none;
@@ -42,7 +47,8 @@ body {
 	opacity: 1;
 	width: 100px;
 	text-align: center;
-	margin-top: 9px;
+	margin-top: 15px;
+	margin-bottom: 50px;
 	
 }
 
