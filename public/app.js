@@ -2,11 +2,20 @@ angular.module("app", ['ngAnimate'])
 .controller("controller", ["$scope", "$http", "$sce", function($scope, $http, $sce){
 	
 	$scope.renderHTML = function(text){ return $sce.trustAsHtml(text); };	
-	$scope.emojione = emojione;
-	emoji.img_path = "images/"
-	$scope.js_emoji = emoji;
+	$scope.twemoji = twemoji;
 	
-	console.log(emoji.replace_unified("í ½í´§"));
+	$scope.renderEmoji = function(emoji, size){
+		switch(size){
+			case "small": size = "16x16"; break;
+			case "medium": size = "36x36"; break;
+			case "large": size = "72x72"; break;
+		}
+		var code = $scope.twemoji.parse(emoji, function(icon, options, variant){
+			return '/bower_components/twemoji/' + size + '/' + icon + '.png';
+		})
+		
+		return $scope.renderHTML(code);
+	}
 	
 	// Hard-coding party in here
 	$scope.party = {

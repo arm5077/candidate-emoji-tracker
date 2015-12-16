@@ -46,7 +46,8 @@ a {
 	opacity: 1;
 	width: 100px;
 	text-align: center;
-	margin-top: 9px;
+	margin-top: 20px;
+	margin-bottom: 100px;
 	
 }
 
@@ -146,7 +147,7 @@ a {
 	display: inline-block;
 }
 
-.small-emoji .emoji {
+.small-emoji a.emoji {
 	border-right: 3px solid rgba(238,42,36,.2);
 	padding-right: 10px;
 	margin-right: 10px;
@@ -157,7 +158,7 @@ a {
 	width: 25px;
 }
 
-	.democrat .small-emoji .emoji {
+	.democrat .small-emoji a.emoji {
 		border-right: 3px solid rgba(0,58,99, .2);
 	}
 
@@ -165,6 +166,8 @@ a {
 	font-family: "Rajdhani", serif;
 	width: 30px;
 	text-align: left;
+	position: relative;
+	top: -6px;
 }
 
 @media screen and (max-width: 600px) {

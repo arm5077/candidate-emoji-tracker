@@ -3,3 +3,5 @@ node_modules/*
 !node_modules/political-emojis
 !node_modules/twitter-emoji-stream
 keys
+bower_components
+public/bower_components
