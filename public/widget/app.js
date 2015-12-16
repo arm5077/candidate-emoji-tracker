@@ -21,6 +21,7 @@ angular.module("app", ['ngAnimate'])
 	socket.on('tweet', function (data) {
 		$scope.$apply(function(){
 			$scope.feed.unshift(data);
+			$scope.feed.splice(10 , 20);
 		})
 	});
 	
