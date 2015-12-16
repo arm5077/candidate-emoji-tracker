@@ -48,6 +48,7 @@ body {
 	margin-top:5px;
 }
 
+
 .source, .notes {
 	font-size: 9pt;
 	font-weight: 300;
@@ -55,6 +56,7 @@ body {
 	color: #999;
 	margin-top: 5px;
 	padding-top: 7px;
+	font-family: "Proxima Sans", sans-serif;
 }
 
 .notes {
