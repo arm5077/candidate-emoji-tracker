@@ -1,8 +1,13 @@
 angular.module("app", ['ngAnimate'])
 .controller("controller", ["$scope", "$http", "$sce", function($scope, $http, $sce){
 	
+	// Hard-coding party in here
+	$scope.party = 
 	$scope.feed = [];
 	$http.get("/api/latest").success(function(data){
+		data = data.filter(function(d){ 
+			return !RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji);
+		 });
 		$scope.feed = data;
 	});
 	
