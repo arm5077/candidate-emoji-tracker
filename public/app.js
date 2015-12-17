@@ -48,9 +48,6 @@ angular.module("app", ['ngAnimate'])
 		data.forEach(function(d,i){
 			$scope.candidates[d.last_name.toLowerCase()] = d.full_name;
 		});
-		
-		console.log(data.length);
-	
 	});
 	
 		
