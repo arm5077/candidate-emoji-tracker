@@ -170,6 +170,11 @@ a {
 	font-size: 20pt;
 }
 
+.big-emoji img.emoji {
+    width: 72px;
+    height: 72px;
+}
+
 .small-emoji-holder {
 	display:inline-block;
 	width: 120px;
