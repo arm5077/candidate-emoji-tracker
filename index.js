@@ -29,3 +29,5 @@ app.use("/", express.static(__dirname + "/public/"));
 
 politicalEmojis.acceptConnections(server);
 politicalEmojis.filterPoliticalEmojis();
+
+setInterval(function(){ console.log("new list built!"); politicalEmojis.buildList(server) }, 60000)
