@@ -101,6 +101,8 @@ a {
 	
 	.feed-item .emoji {
 		font-size: 35pt;
+		width: 40px;
+		margin: auto;
 	}
 
 /* profiles */

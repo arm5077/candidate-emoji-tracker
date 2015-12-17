@@ -40,7 +40,7 @@
 			<h2>A live feed of the emojis being used to describe candidates on Twitter.</h2>
 		</div>
 		<a ng-href="{{emoji.link}}" class="feed-item" ng-repeat="emoji in feed" target="blank">
-			<div class="emoji" ng-bind-html="renderEmoji(emoji.emoji, 'medium')"></div>
+			<div class="emoji" ng-bind-html="renderEmoji(emoji.emoji, 'svg')"></div>
 			<div class="name" ng-bind="emoji.candidate"></div>
 		</a>
 	</div>
