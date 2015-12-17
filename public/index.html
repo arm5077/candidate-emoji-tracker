@@ -51,11 +51,16 @@
 				<div class="name">{{candidates[candidate.name]}} <span class="small">({{candidate.total}})</span></div>
 			</div>
 
-			<a class="big-emoji-holder" ng-href="{{ candidate.emojis[0].link }}" target="none">
+			<div class="big-emoji-holder"  target="none">
 				<div class="title">Most popular</div>
-				<div class="big-emoji" ng-bind-html="renderEmoji(candidate.emojis[0].emoji, 'svg')"></div>
+				<a ng-href="{{ candidate.emojis[0].link }}">
+					<div class="big-emoji" ng-bind-html="renderEmoji(candidate.emojis[0].emoji, 'svg')"></div>
+				</a>
 				<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
-			</a>
+				<div class="tweet">
+					<a target="blank" ng-href="https://twitter.com/intent/tweet?text=The top emoji describing {{candidates[candidate.name]}}, from @TheAtlantic's live tracker: {{candidate.emojis[0].emoji + candidate.emojis[0].emoji + candidate.emojis[0].emoji}} (http://www.theatlantic.com/politics/archive/2015/12/emojis-2016-presidential-election/420840/)">Tweet this</a>
+				</div>
+			</div>
 
 			<div class="small-emoji-holder">
 				<div class="title">The rest</div>
