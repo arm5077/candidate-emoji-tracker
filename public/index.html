@@ -16,7 +16,7 @@
 	<script src="bower_components/regenerate/regenerate.js"></script>
 
 	<!-- Twemoji support -->
-	<script src="bower_components/twemoji/twemoji.min.js"></script>
+	<script src="twemoji.js"></script>
 	
 
 	<!-- Basic styles -->
@@ -53,14 +53,14 @@
 
 			<a class="big-emoji-holder" ng-href="{{ candidate.emojis[0].link }}" target="none">
 				<div class="title">Most popular</div>
-				<div class="big-emoji" ng-bind-html="renderEmoji(candidate.emojis[0].emoji, 'large')"></div>
+				<div class="big-emoji" ng-bind-html="renderEmoji(candidate.emojis[0].emoji, 'svg')"></div>
 				<div class="number" ng-bind="candidate.emojis[0].percentage + '%'"></div>
 			</a>
 
 			<div class="small-emoji-holder">
 				<div class="title">The rest</div>
 				<div class="small-emoji" ng-repeat="emoji in candidate.emojis | limitTo: 6" ng-if="$index > 0">
-					<a class="emoji" ng-href="{{emoji.link}}" ng-bind-html="renderEmoji(emoji.emoji, 'small')" target="none"></a>
+					<a class="emoji" ng-href="{{emoji.link}}" ng-bind-html="renderEmoji(emoji.emoji, 'svg')" target="none"></a>
 					<div class="percentage">{{emoji.percentage}}%</div>
 				</div>
 			</div>
