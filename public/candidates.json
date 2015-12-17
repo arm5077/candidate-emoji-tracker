@@ -8,10 +8,6 @@
     "last_name":"Sanders"
   },
   {
-    "full_name":"Bobby Jindal",
-    "last_name":"Jindal"
-  },
-  {
     "full_name":"Carly Fiorina",
     "last_name":"Fiorina"
   },
@@ -32,16 +28,8 @@
     "last_name":"Bush"
   },
   {
-    "full_name":"Jim Webb",
-    "last_name":"Webb"
-  },
-  {
     "full_name":"John Kasich",
     "last_name":"Kasich"
-  },
-  {
-    "full_name":"Lincoln Chafee",
-    "last_name":"Chafee"
   },
   {
     "full_name":"Lindsey Graham",
@@ -64,16 +52,8 @@
     "last_name":"Paul"
   },
   {
-    "full_name":"Rick Perry",
-    "last_name":"Perry"
-  },
-  {
     "full_name":"Rick Santorum",
     "last_name":"Santorum"
-  },
-  {
-    "full_name":"Scott Walker",
-    "last_name":"Walker"
   },
   {
     "full_name":"Ted Cruz",

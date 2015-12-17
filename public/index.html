@@ -31,7 +31,7 @@
 
 		<div class="titlebox center">
 			<h1>How a Candidate Becomes an Emoji</h1>
-			<h2>We're tracking Twitter's live feed and scraping emojis referring to presidential candidates. Below, you can see the emojis used most often to describe each contender. Click an emoji to see the most recent tweet using it.</h2>
+			<h2>We're tracking Twitter's live feed and compiling emojis referring to presidential candidates. Below, you can see the emojis used most often to describe each contender. Click an emoji to see the most recent tweet using it.</h2>
 		</div>
 	
 	<div class="feed">
@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="profiles">
-		<div class="profile" ng-repeat="candidate in data" ng-if="candidate.emojis.length >=6" ng-class="{democrat: party[candidate.name] == 'democrat'}">
+		<div class="profile" ng-repeat="candidate in data" ng-class="{democrat: party[candidate.name] == 'democrat'}" ng-if="candidates[candidate.name]">
 			<div class="header">
 				<div class="name">{{candidates[candidate.name]}} <span class="small">({{candidate.total}})</span></div>
 			</div>

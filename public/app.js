@@ -44,38 +44,49 @@ angular.module("app", ['ngAnimate'])
 	
 	
 	$http.get("candidates.json").success(function(data){
-		
 		$scope.candidates = {};
 		data.forEach(function(d,i){
 			$scope.candidates[d.last_name.toLowerCase()] = d.full_name;
 		});
+		
+		console.log(data.length);
+	
 	});
 	
-	$http.get("/api/list").success(function(data){
+		
+		$http.get("/api/list").success(function(list){
+		
 		
 		// Get rid of í ½í¸‚... it's so popular that it skews the results
 		// Also get rid of skin tones
-		data.forEach(function(candidate){
+		list.forEach(function(candidate){
 			candidate.emojis.forEach(function(d){
 				if(RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji))
 					candidate.total -= d.count;
 			})
-			
+
 			candidate.emojis = candidate.emojis.filter(function(d){ 
 				return !RegExp(/\uD83C[\uDFFB-\uDFFF]|\uD83D\uDE02/).test(d.emoji);
 			 });
-			
+
 			// Figure out percentages
 			candidate.emojis.forEach(function(emoji){
 				emoji.percentage = Math.round(emoji.count / candidate.total * 1000) / 10; 
 			});
 		});
 		
+		for( candidate in $scope.candidates ){
+			if( list.map(function(d){ return d.name } ).indexOf(candidate) == -1 ){
+				list.push({ name: candidate });
+			}
+
+		}
 		
-		
+
 		// Bind to DOM
-		$scope.data = data;
+		$scope.data = list;
 	});
+	
 	
 	
 	var socket = io();
